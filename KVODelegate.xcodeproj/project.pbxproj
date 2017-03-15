@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3CF5EE731E79C3D3008C829C /* KVODelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5EE691E79C3D3008C829C /* KVODelegate.framework */; };
-		3CF5EE781E79C3D3008C829C /* KVODelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE771E79C3D3008C829C /* KVODelegateTests.m */; };
+		3CF5EE781E79C3D3008C829C /* ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE771E79C3D3008C829C /* ObjCTests.m */; };
 		3CF5EE7A1E79C3D3008C829C /* KVODelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CF5EE851E79C419008C829C /* KVOObservationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CF5EE861E79C419008C829C /* KVOObservationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */; };
+		3CF5EE891E79C49D008C829C /* SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE881E79C49D008C829C /* SwiftTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +30,12 @@
 		3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVODelegate.h; sourceTree = "<group>"; };
 		3CF5EE6D1E79C3D3008C829C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CF5EE721E79C3D3008C829C /* KVODelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CF5EE771E79C3D3008C829C /* KVODelegateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVODelegateTests.m; sourceTree = "<group>"; };
+		3CF5EE771E79C3D3008C829C /* ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCTests.m; sourceTree = "<group>"; };
 		3CF5EE791E79C3D3008C829C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOObservationDelegate.h; sourceTree = "<group>"; };
+		3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOObservationDelegate.m; sourceTree = "<group>"; };
+		3CF5EE871E79C49D008C829C /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		3CF5EE881E79C49D008C829C /* SwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */,
+				3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */,
+				3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */,
 				3CF5EE6D1E79C3D3008C829C /* Info.plist */,
 			);
 			path = KVODelegate;
@@ -80,7 +89,9 @@
 		3CF5EE761E79C3D3008C829C /* KVODelegateTests */ = {
 			isa = PBXGroup;
 			children = (
-				3CF5EE771E79C3D3008C829C /* KVODelegateTests.m */,
+				3CF5EE771E79C3D3008C829C /* ObjCTests.m */,
+				3CF5EE881E79C49D008C829C /* SwiftTests.swift */,
+				3CF5EE871E79C49D008C829C /* BridgingHeader.h */,
 				3CF5EE791E79C3D3008C829C /* Info.plist */,
 			);
 			path = KVODelegateTests;
@@ -94,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF5EE7A1E79C3D3008C829C /* KVODelegate.h in Headers */,
+				3CF5EE851E79C419008C829C /* KVOObservationDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +165,7 @@
 					3CF5EE711E79C3D3008C829C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7H3X83BUY2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -197,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF5EE861E79C419008C829C /* KVOObservationDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CF5EE781E79C3D3008C829C /* KVODelegateTests.m in Sources */,
+				3CF5EE781E79C3D3008C829C /* ObjCTests.m in Sources */,
+				3CF5EE891E79C49D008C829C /* SwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,24 +370,31 @@
 		3CF5EE811E79C3D3008C829C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7H3X83BUY2;
 				INFOPLIST_FILE = KVODelegateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justcheesy.KVODelegateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = KVODelegateTests/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3CF5EE821E79C3D3008C829C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7H3X83BUY2;
 				INFOPLIST_FILE = KVODelegateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justcheesy.KVODelegateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = KVODelegateTests/BridgingHeader.h;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -395,6 +417,7 @@
 				3CF5EE7F1E79C3D3008C829C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CF5EE801E79C3D3008C829C /* Build configuration list for PBXNativeTarget "KVODelegateTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +426,7 @@
 				3CF5EE821E79C3D3008C829C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CF5EE731E79C3D3008C829C /* KVODelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5EE691E79C3D3008C829C /* KVODelegate.framework */; };
-		3CF5EE781E79C3D3008C829C /* ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE771E79C3D3008C829C /* ObjCTests.m */; };
+		3C8453121E7A1F9500FADC05 /* KVODelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5EE691E79C3D3008C829C /* KVODelegate.framework */; };
+		3C8453181E7A261F00FADC05 /* SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE881E79C49D008C829C /* SwiftTests.swift */; };
+		3C8453191E7A276900FADC05 /* ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE771E79C3D3008C829C /* ObjCTests.m */; };
+		3C84532D1E7B22BE00FADC05 /* KVONotificationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */; };
+		3C84532E1E7B22BE00FADC05 /* KVONotificationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */; };
 		3CF5EE7A1E79C3D3008C829C /* KVODelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE851E79C419008C829C /* KVOObservationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE861E79C419008C829C /* KVOObservationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */; };
-		3CF5EE891E79C49D008C829C /* SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE881E79C49D008C829C /* SwiftTests.swift */; };
+		3CF5EE8D1E7A1D7B008C829C /* KVODelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5EE691E79C3D3008C829C /* KVODelegate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3C8453131E7A1F9500FADC05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CF5EE601E79C3D3008C829C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CF5EE681E79C3D3008C829C;
+			remoteInfo = KVODelegate;
+		};
 		3CF5EE741E79C3D3008C829C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CF5EE601E79C3D3008C829C /* Project object */;
@@ -26,10 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C84530D1E7A1F9500FADC05 /* KVODelegateSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C8453111E7A1F9500FADC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegate.h; sourceTree = "<group>"; };
+		3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVONotificationDelegate.m; sourceTree = "<group>"; };
 		3CF5EE691E79C3D3008C829C /* KVODelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KVODelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVODelegate.h; sourceTree = "<group>"; };
-		3CF5EE6D1E79C3D3008C829C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CF5EE721E79C3D3008C829C /* KVODelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF5EE721E79C3D3008C829C /* KVODelegateObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF5EE771E79C3D3008C829C /* ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCTests.m; sourceTree = "<group>"; };
 		3CF5EE791E79C3D3008C829C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOObservationDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +52,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3C84530A1E7A1F9500FADC05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8453121E7A1F9500FADC05 /* KVODelegate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CF5EE651E79C3D3008C829C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,18 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CF5EE731E79C3D3008C829C /* KVODelegate.framework in Frameworks */,
+				3CF5EE8D1E7A1D7B008C829C /* KVODelegate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C84530E1E7A1F9500FADC05 /* KVODelegateSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5EE881E79C49D008C829C /* SwiftTests.swift */,
+				3CF5EE871E79C49D008C829C /* BridgingHeader.h */,
+				3C8453111E7A1F9500FADC05 /* Info.plist */,
+			);
+			path = KVODelegateSwiftTests;
+			sourceTree = "<group>";
+		};
 		3CF5EE5F1E79C3D3008C829C = {
 			isa = PBXGroup;
 			children = (
 				3CF5EE6B1E79C3D3008C829C /* KVODelegate */,
-				3CF5EE761E79C3D3008C829C /* KVODelegateTests */,
+				3CF5EE761E79C3D3008C829C /* KVODelegateObjCTests */,
+				3C84530E1E7A1F9500FADC05 /* KVODelegateSwiftTests */,
 				3CF5EE6A1E79C3D3008C829C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				3CF5EE691E79C3D3008C829C /* KVODelegate.framework */,
-				3CF5EE721E79C3D3008C829C /* KVODelegateTests.xctest */,
+				3CF5EE721E79C3D3008C829C /* KVODelegateObjCTests.xctest */,
+				3C84530D1E7A1F9500FADC05 /* KVODelegateSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,20 +114,19 @@
 				3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */,
 				3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */,
 				3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */,
-				3CF5EE6D1E79C3D3008C829C /* Info.plist */,
+				3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */,
+				3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */,
 			);
 			path = KVODelegate;
 			sourceTree = "<group>";
 		};
-		3CF5EE761E79C3D3008C829C /* KVODelegateTests */ = {
+		3CF5EE761E79C3D3008C829C /* KVODelegateObjCTests */ = {
 			isa = PBXGroup;
 			children = (
 				3CF5EE771E79C3D3008C829C /* ObjCTests.m */,
-				3CF5EE881E79C49D008C829C /* SwiftTests.swift */,
-				3CF5EE871E79C49D008C829C /* BridgingHeader.h */,
 				3CF5EE791E79C3D3008C829C /* Info.plist */,
 			);
-			path = KVODelegateTests;
+			path = KVODelegateObjCTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +136,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C84532D1E7B22BE00FADC05 /* KVONotificationDelegate.h in Headers */,
 				3CF5EE7A1E79C3D3008C829C /* KVODelegate.h in Headers */,
 				3CF5EE851E79C419008C829C /* KVOObservationDelegate.h in Headers */,
 			);
@@ -112,6 +145,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3C84530C1E7A1F9500FADC05 /* KVODelegateSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C8453171E7A1F9500FADC05 /* Build configuration list for PBXNativeTarget "KVODelegateSwiftTests" */;
+			buildPhases = (
+				3C8453091E7A1F9500FADC05 /* Sources */,
+				3C84530A1E7A1F9500FADC05 /* Frameworks */,
+				3C84530B1E7A1F9500FADC05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C8453141E7A1F9500FADC05 /* PBXTargetDependency */,
+			);
+			name = KVODelegateSwiftTests;
+			productName = KVODelegateTestsTemp;
+			productReference = 3C84530D1E7A1F9500FADC05 /* KVODelegateSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3CF5EE681E79C3D3008C829C /* KVODelegate */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF5EE7D1E79C3D3008C829C /* Build configuration list for PBXNativeTarget "KVODelegate" */;
@@ -130,9 +181,9 @@
 			productReference = 3CF5EE691E79C3D3008C829C /* KVODelegate.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3CF5EE711E79C3D3008C829C /* KVODelegateTests */ = {
+		3CF5EE711E79C3D3008C829C /* KVODelegateObjCTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CF5EE801E79C3D3008C829C /* Build configuration list for PBXNativeTarget "KVODelegateTests" */;
+			buildConfigurationList = 3CF5EE801E79C3D3008C829C /* Build configuration list for PBXNativeTarget "KVODelegateObjCTests" */;
 			buildPhases = (
 				3CF5EE6E1E79C3D3008C829C /* Sources */,
 				3CF5EE6F1E79C3D3008C829C /* Frameworks */,
@@ -143,9 +194,9 @@
 			dependencies = (
 				3CF5EE751E79C3D3008C829C /* PBXTargetDependency */,
 			);
-			name = KVODelegateTests;
+			name = KVODelegateObjCTests;
 			productName = KVODelegateTests;
-			productReference = 3CF5EE721E79C3D3008C829C /* KVODelegateTests.xctest */;
+			productReference = 3CF5EE721E79C3D3008C829C /* KVODelegateObjCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -155,9 +206,15 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = KVO;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ThatsJustCheesy;
 				TargetAttributes = {
+					3C84530C1E7A1F9500FADC05 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7H3X83BUY2;
+						ProvisioningStyle = Automatic;
+					};
 					3CF5EE681E79C3D3008C829C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7H3X83BUY2;
@@ -184,12 +241,20 @@
 			projectRoot = "";
 			targets = (
 				3CF5EE681E79C3D3008C829C /* KVODelegate */,
-				3CF5EE711E79C3D3008C829C /* KVODelegateTests */,
+				3CF5EE711E79C3D3008C829C /* KVODelegateObjCTests */,
+				3C84530C1E7A1F9500FADC05 /* KVODelegateSwiftTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3C84530B1E7A1F9500FADC05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CF5EE671E79C3D3008C829C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,10 +272,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3C8453091E7A1F9500FADC05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8453181E7A261F00FADC05 /* SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CF5EE641E79C3D3008C829C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C84532E1E7B22BE00FADC05 /* KVONotificationDelegate.m in Sources */,
 				3CF5EE861E79C419008C829C /* KVOObservationDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,14 +293,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CF5EE781E79C3D3008C829C /* ObjCTests.m in Sources */,
-				3CF5EE891E79C49D008C829C /* SwiftTests.swift in Sources */,
+				3C8453191E7A276900FADC05 /* ObjCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3C8453141E7A1F9500FADC05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CF5EE681E79C3D3008C829C /* KVODelegate */;
+			targetProxy = 3C8453131E7A1F9500FADC05 /* PBXContainerItemProxy */;
+		};
 		3CF5EE751E79C3D3008C829C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3CF5EE681E79C3D3008C829C /* KVODelegate */;
@@ -235,6 +313,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3C8453151E7A1F9500FADC05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7H3X83BUY2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justcheesy.KVODelegateTestsTemp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3C8453161E7A1F9500FADC05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7H3X83BUY2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justcheesy.KVODelegateTestsTemp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		3CF5EE7B1E79C3D3008C829C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -276,6 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -320,6 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -339,12 +446,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = KVODelegate/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justcheesy.KVODelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -359,12 +464,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = KVODelegate/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justcheesy.KVODelegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -374,7 +477,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7H3X83BUY2;
-				INFOPLIST_FILE = KVODelegateTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justcheesy.KVODelegateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,7 +493,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7H3X83BUY2;
-				INFOPLIST_FILE = KVODelegateTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justcheesy.KVODelegateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,6 +505,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C8453171E7A1F9500FADC05 /* Build configuration list for PBXNativeTarget "KVODelegateSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C8453151E7A1F9500FADC05 /* Debug */,
+				3C8453161E7A1F9500FADC05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3CF5EE631E79C3D3008C829C /* Build configuration list for PBXProject "KVODelegate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -420,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CF5EE801E79C3D3008C829C /* Build configuration list for PBXNativeTarget "KVODelegateTests" */ = {
+		3CF5EE801E79C3D3008C829C /* Build configuration list for PBXNativeTarget "KVODelegateObjCTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CF5EE811E79C3D3008C829C /* Debug */,

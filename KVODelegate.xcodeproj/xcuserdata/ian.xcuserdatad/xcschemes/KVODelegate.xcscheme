@@ -33,8 +33,18 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3CF5EE711E79C3D3008C829C"
-               BuildableName = "KVODelegateTests.xctest"
-               BlueprintName = "KVODelegateTests"
+               BuildableName = "KVODelegateObjCTests.xctest"
+               BlueprintName = "KVODelegateObjCTests"
+               ReferencedContainer = "container:KVODelegate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3C84530C1E7A1F9500FADC05"
+               BuildableName = "KVODelegateSwiftTests.xctest"
+               BlueprintName = "KVODelegateSwiftTests"
                ReferencedContainer = "container:KVODelegate.xcodeproj">
             </BuildableReference>
          </TestableReference>

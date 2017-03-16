@@ -154,6 +154,7 @@
 		3CF5EE601E79C3D3008C829C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KVO;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ThatsJustCheesy;
 				TargetAttributes = {

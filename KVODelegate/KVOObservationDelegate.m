@@ -20,8 +20,8 @@ typedef NSDictionary<NSString*,id> KVOObservationAttributesDict;
 typedef NSMutableDictionary<NSString*,KVOObservationAttributesDict*> KVOKeyPathsDict;
 typedef NSString* KVOObservationAttributesKey NS_STRING_ENUM;
 
-const KVOObservationAttributesKey kKVOObservationAttributeBlock = @"block";
-const KVOObservationAttributesKey kKVOObservationAttributeBlockType = @"blockType";
+static const KVOObservationAttributesKey kKVOObservationAttributeBlock = @"block";
+static const KVOObservationAttributesKey kKVOObservationAttributeBlockType = @"blockType";
 
 #define KVOObservationAttributes(blockType, block) @{kKVOObservationAttributeBlockType:@(blockType), kKVOObservationAttributeBlock:block}
 #define KVOSelfContext (__bridge void*)self

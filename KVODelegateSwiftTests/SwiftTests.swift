@@ -28,7 +28,6 @@ class KVODelegateTests: XCTestCase {
     
     func testBasicObserving() {
         let a = Person()
-        a.name = "Bob"
         a.address = "123 Happy Street"
         
         let sema = DispatchSemaphore(value: 0)

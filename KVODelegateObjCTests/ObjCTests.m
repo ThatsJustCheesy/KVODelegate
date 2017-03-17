@@ -9,13 +9,8 @@
 @import XCTest;
 @import KVODelegate;
 
-@interface Person : NSObject
-@property NSString *name, *address, *postalCode;
-@property NSArray<NSNumber*> *creditCardNumbers;
-@end
-
-@implementation Person
-@end
+#import "PersonA.h"
+#import "PersonB.h"
 
 @interface KVODelegateTests : XCTestCase
 @property KVOObservationDelegate *kvoDelegate;
@@ -33,8 +28,7 @@
 }
 
 - (void)testBasicObserving {
-    Person *a = [Person new];
-    a.name = @"Bob";
+    PersonA *a = [PersonA new];
     a.address = @"123 Happy Street";
     
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
@@ -68,9 +62,30 @@
     XCTAssert(signalReceived == 0);
     XCTAssert([a.postalCode isEqualToString:@"X7Y 8Z9"]);
     
-    [self.kvoDelegate stopObservingKeyPath:@"address" on:a];
-    
     [self.kvoDelegate stopObservingAllKeyPathsOn:a];
+}
+
+- (void)testDependentKeys {
+    PersonB *b = [PersonB new];
+    
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+    dispatch_time_t timeout = dispatch_time(DISPATCH_TIME_NOW, 1000*NSEC_PER_MSEC);
+    long signalReceived;
+    
+    [self.kvoDelegate startObservingKeyPath:@"fullName" on:b usingBlock:^{
+        dispatch_semaphore_signal(sema);
+    }];
+    b.fullName = @"Billy Brown";
+    signalReceived = dispatch_semaphore_wait(sema, timeout);
+    XCTAssert(signalReceived == 0);
+    b.firstName = @"Barbara";
+    signalReceived = dispatch_semaphore_wait(sema, timeout);
+    XCTAssert(signalReceived == 0);
+    b.lastName = @"Blue";
+    signalReceived = dispatch_semaphore_wait(sema, timeout);
+    XCTAssert(signalReceived == 0);
+    
+    [self.kvoDelegate stopObservingAllKeyPathsOn:b];
 }
 
 @end

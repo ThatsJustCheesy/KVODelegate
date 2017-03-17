@@ -10,8 +10,11 @@
 		3C8453121E7A1F9500FADC05 /* KVODelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5EE691E79C3D3008C829C /* KVODelegate.framework */; };
 		3C8453181E7A261F00FADC05 /* SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE881E79C49D008C829C /* SwiftTests.swift */; };
 		3C8453191E7A276900FADC05 /* ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE771E79C3D3008C829C /* ObjCTests.m */; };
-		3C84532D1E7B22BE00FADC05 /* KVONotificationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */; };
+		3C84532D1E7B22BE00FADC05 /* KVONotificationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C84532E1E7B22BE00FADC05 /* KVONotificationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */; };
+		3C8453441E7B44CA00FADC05 /* PersonA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453431E7B44CA00FADC05 /* PersonA.m */; };
+		3C8453471E7B49E200FADC05 /* PersonB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453461E7B49E200FADC05 /* PersonB.m */; };
+		3C84534B1E7B6CBF00FADC05 /* KVONotificationDelegator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C84534A1E7B6CBF00FADC05 /* KVONotificationDelegator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE7A1E79C3D3008C829C /* KVODelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE851E79C419008C829C /* KVOObservationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE861E79C419008C829C /* KVOObservationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */; };
@@ -40,6 +43,11 @@
 		3C8453111E7A1F9500FADC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegate.h; sourceTree = "<group>"; };
 		3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVONotificationDelegate.m; sourceTree = "<group>"; };
+		3C8453421E7B44CA00FADC05 /* PersonA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonA.h; sourceTree = "<group>"; };
+		3C8453431E7B44CA00FADC05 /* PersonA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonA.m; sourceTree = "<group>"; };
+		3C8453451E7B49D500FADC05 /* PersonB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonB.h; sourceTree = "<group>"; };
+		3C8453461E7B49E200FADC05 /* PersonB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonB.m; sourceTree = "<group>"; };
+		3C84534A1E7B6CBF00FADC05 /* KVONotificationDelegator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegator.h; sourceTree = "<group>"; };
 		3CF5EE691E79C3D3008C829C /* KVODelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KVODelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVODelegate.h; sourceTree = "<group>"; };
 		3CF5EE721E79C3D3008C829C /* KVODelegateObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +124,7 @@
 				3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */,
 				3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */,
 				3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */,
+				3C84534A1E7B6CBF00FADC05 /* KVONotificationDelegator.h */,
 			);
 			path = KVODelegate;
 			sourceTree = "<group>";
@@ -124,6 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				3CF5EE771E79C3D3008C829C /* ObjCTests.m */,
+				3C8453421E7B44CA00FADC05 /* PersonA.h */,
+				3C8453431E7B44CA00FADC05 /* PersonA.m */,
+				3C8453451E7B49D500FADC05 /* PersonB.h */,
+				3C8453461E7B49E200FADC05 /* PersonB.m */,
 				3CF5EE791E79C3D3008C829C /* Info.plist */,
 			);
 			path = KVODelegateObjCTests;
@@ -138,6 +151,7 @@
 			files = (
 				3C84532D1E7B22BE00FADC05 /* KVONotificationDelegate.h in Headers */,
 				3CF5EE7A1E79C3D3008C829C /* KVODelegate.h in Headers */,
+				3C84534B1E7B6CBF00FADC05 /* KVONotificationDelegator.h in Headers */,
 				3CF5EE851E79C419008C829C /* KVOObservationDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8453471E7B49E200FADC05 /* PersonB.m in Sources */,
+				3C8453441E7B44CA00FADC05 /* PersonA.m in Sources */,
 				3C8453191E7A276900FADC05 /* ObjCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +402,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(TARGET_NAME)/**";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -430,6 +447,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(TARGET_NAME)/**";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

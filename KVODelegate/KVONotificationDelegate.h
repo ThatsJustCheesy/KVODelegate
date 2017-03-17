@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) Class <KVONotificationDelegator> owner;
 
-+ (instancetype)delegateForClass:(Class)clas;
++ (instancetype)delegateForClass:(Class <KVONotificationDelegator>)clas;
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 

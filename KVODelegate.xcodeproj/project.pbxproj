@@ -15,6 +15,8 @@
 		3C8453441E7B44CA00FADC05 /* PersonA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453431E7B44CA00FADC05 /* PersonA.m */; };
 		3C8453471E7B49E200FADC05 /* PersonB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453461E7B49E200FADC05 /* PersonB.m */; };
 		3C84534B1E7B6CBF00FADC05 /* KVONotificationDelegator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C84534A1E7B6CBF00FADC05 /* KVONotificationDelegator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C84534F1E7C2E7C00FADC05 /* PersonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84534E1E7C2E7C00FADC05 /* PersonA.swift */; };
+		3C8453511E7C2E8B00FADC05 /* PersonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453501E7C2E8B00FADC05 /* PersonB.swift */; };
 		3CF5EE7A1E79C3D3008C829C /* KVODelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE851E79C419008C829C /* KVOObservationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE861E79C419008C829C /* KVOObservationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */; };
@@ -41,13 +43,15 @@
 /* Begin PBXFileReference section */
 		3C84530D1E7A1F9500FADC05 /* KVODelegateSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8453111E7A1F9500FADC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegate.h; sourceTree = "<group>"; };
+		3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegate.h; sourceTree = "<group>"; wrapsLines = 1; };
 		3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVONotificationDelegate.m; sourceTree = "<group>"; };
 		3C8453421E7B44CA00FADC05 /* PersonA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonA.h; sourceTree = "<group>"; };
 		3C8453431E7B44CA00FADC05 /* PersonA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonA.m; sourceTree = "<group>"; };
 		3C8453451E7B49D500FADC05 /* PersonB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonB.h; sourceTree = "<group>"; };
 		3C8453461E7B49E200FADC05 /* PersonB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonB.m; sourceTree = "<group>"; };
 		3C84534A1E7B6CBF00FADC05 /* KVONotificationDelegator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegator.h; sourceTree = "<group>"; };
+		3C84534E1E7C2E7C00FADC05 /* PersonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonA.swift; sourceTree = "<group>"; };
+		3C8453501E7C2E8B00FADC05 /* PersonB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonB.swift; sourceTree = "<group>"; };
 		3CF5EE691E79C3D3008C829C /* KVODelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KVODelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVODelegate.h; sourceTree = "<group>"; };
 		3CF5EE721E79C3D3008C829C /* KVODelegateObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				3CF5EE881E79C49D008C829C /* SwiftTests.swift */,
+				3C84534E1E7C2E7C00FADC05 /* PersonA.swift */,
+				3C8453501E7C2E8B00FADC05 /* PersonB.swift */,
 				3CF5EE871E79C49D008C829C /* BridgingHeader.h */,
 				3C8453111E7A1F9500FADC05 /* Info.plist */,
 			);
@@ -290,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8453511E7C2E8B00FADC05 /* PersonB.swift in Sources */,
+				3C84534F1E7C2E7C00FADC05 /* PersonA.swift in Sources */,
 				3C8453181E7A261F00FADC05 /* SwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -191,31 +191,31 @@ static const KVOObservationAttributesKey kKVOObservationAttributeBlockType = @"b
         } break;
         case eKVOBlockTypeNewOld: {
             KVONewOldBlock block = attributes[kKVOObservationAttributeBlock];
-            id new = change[NSKeyValueChangeNewKey], old = change[NSKeyValueChangeOldKey];
-            if (new == [NSNull null]) new = nil;
-            if (old == [NSNull null]) old = nil;
-            block(new, old);
+            id newVal = change[NSKeyValueChangeNewKey], oldVal = change[NSKeyValueChangeOldKey];
+            if (newVal == [NSNull null]) newVal = nil;
+            if (oldVal == [NSNull null]) oldVal = nil;
+            block(newVal, oldVal);
         } break;
         case eKVOBlockTypeKeyPathNewOld: {
             KVOKeyPathNewOldBlock block = attributes[@"keyPathNewOldBlock"];
-            id new = change[NSKeyValueChangeNewKey], old = change[NSKeyValueChangeOldKey];
-            if (new == [NSNull null]) new = nil;
-            if (old == [NSNull null]) old = nil;
-            block(keyPath, new, old);
+            id newVal = change[NSKeyValueChangeNewKey], oldVal = change[NSKeyValueChangeOldKey];
+            if (newVal == [NSNull null]) newVal = nil;
+            if (oldVal == [NSNull null]) oldVal = nil;
+            block(keyPath, newVal, oldVal);
         } break;
         case eKVOBlockTypeNewOldPrior: {
             KVONewOldPriorBlock block = attributes[@"newOldPriorBlock"];
-            id new = change[NSKeyValueChangeNewKey], old = change[NSKeyValueChangeOldKey];
-            if (new == [NSNull null]) new = nil;
-            if (old == [NSNull null]) old = nil;
-            block(new, old, [change[NSKeyValueChangeNotificationIsPriorKey] boolValue]);
+            id newVal = change[NSKeyValueChangeNewKey], oldVal = change[NSKeyValueChangeOldKey];
+            if (newVal == [NSNull null]) newVal = nil;
+            if (oldVal == [NSNull null]) oldVal = nil;
+            block(newVal, oldVal, [change[NSKeyValueChangeNotificationIsPriorKey] boolValue]);
         } break;
         case eKVOBlockTypeKeyPathNewOldPrior: {
             KVOKeyPathNewOldPriorBlock block = attributes[@"keyPathNewOldPriorBlock"];
-            id new = change[NSKeyValueChangeNewKey], old = change[NSKeyValueChangeOldKey];
-            if (new == [NSNull null]) new = nil;
-            if (old == [NSNull null]) old = nil;
-            block(keyPath, new, old, [change[NSKeyValueChangeNotificationIsPriorKey] boolValue]);
+            id newVal = change[NSKeyValueChangeNewKey], oldVal = change[NSKeyValueChangeOldKey];
+            if (newVal == [NSNull null]) newVal = nil;
+            if (oldVal == [NSNull null]) oldVal = nil;
+            block(keyPath, newVal, oldVal, [change[NSKeyValueChangeNotificationIsPriorKey] boolValue]);
         } break;
     }
 }

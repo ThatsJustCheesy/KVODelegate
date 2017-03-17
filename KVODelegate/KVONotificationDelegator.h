@@ -12,6 +12,6 @@
 
 @protocol KVONotificationDelegator <NSObject>
 
-+ (void)configKVONotificationDelegate:(KVONotificationDelegate *)delegate;
++ (void)configKVONotificationDelegate:(nonnull KVONotificationDelegate *)delegate;
 
 @end

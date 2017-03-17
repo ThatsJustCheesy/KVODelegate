@@ -31,7 +31,7 @@ class KVODelegateTests: XCTestCase {
         a.address = "123 Happy Street"
         
         let sema = DispatchSemaphore(value: 0)
-        let timeout = DispatchTime.now() + DispatchTimeInterval.milliseconds(1000)
+        let timeout = DispatchTime.now() + .milliseconds(1000)
         var signalReceived: DispatchTimeoutResult
         
         kvoDelegate.startObserving(keyPath: "postalCode", on: a, using: {
@@ -69,6 +69,29 @@ class KVODelegateTests: XCTestCase {
         kvoDelegate.stopObserving(keyPath: "address", on: a)
         
         kvoDelegate.stopObserving(allKeyPathsOn: a)
+    }
+    
+    func testDependentKeys() {
+        let b = PersonB()
+        
+        let sema = DispatchSemaphore(value: 0)
+        let timeout = DispatchTime.now() + .milliseconds(1000)
+        var signalReceived: DispatchTimeoutResult
+        
+        kvoDelegate.startObserving(keyPath: "fullName", on: b, using: {
+            sema.signal()
+        })
+        b.fullName = "Billy Brown"
+        signalReceived = sema.wait(timeout: timeout)
+        XCTAssert(signalReceived == .success)
+        b.firstName = "Barbara"
+        signalReceived = sema.wait(timeout: timeout)
+        XCTAssert(signalReceived == .success)
+        b.lastName = "Blue"
+        signalReceived = sema.wait(timeout: timeout)
+        XCTAssert(signalReceived == .success)
+        
+        kvoDelegate.stopObserving(allKeyPathsOn: b)
     }
     
 }

@@ -22,7 +22,7 @@ static NSMutableDictionary<Class <KVONotificationDelegator>,KVONotificationDeleg
 @implementation KVONotificationDelegate
 
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wobjc-method-access"
+#pragma clang diagnostic ignored "-Wobjc-method-access" // "Instance method [...] found instead of class method [...]"
 + (instancetype)delegateForClass:(Class <KVONotificationDelegator>)clas {
     static dispatch_once_t once;
     dispatch_once(&once, ^{
@@ -35,7 +35,7 @@ static NSMutableDictionary<Class <KVONotificationDelegator>,KVONotificationDeleg
         if ([clas respondsToSelector:@selector(configKVONotificationDelegate:)]) {
             [clas performSelector:@selector(configKVONotificationDelegate:) withObject:delegate];
         } else {
-            [NSException raise:@"KVONotificationDelegateException" format:@"KVONotificationDelegate requested for class '%@', but it does not respond to +configKVONotificationDelegate (the requested delegate will be useless)", clas];
+            [NSException raise:@"KVONotificationDelegateException" format:@"KVONotificationDelegate requested for class '%@', but it does not respond to +configKVONotificationDelegate: (the requested delegate will be useless)", clas];
         }
     }
     
@@ -47,7 +47,7 @@ static NSMutableDictionary<Class <KVONotificationDelegator>,KVONotificationDeleg
     self = [super init];
     if (!self) return nil;
     
-    self.owner = owner;
+    _owner = owner;
     
     return self;
 }
@@ -81,7 +81,7 @@ static NSMutableDictionary<Class <KVONotificationDelegator>,KVONotificationDeleg
         [affecting unionSet:((NSSet<NSString*>* (*)(id, SEL))objc_msgSend)(ownerSuper, sel)];
     }
     
-    [affecting unionSet:self.dependentKeys[key]];
+    [affecting unionSet:[self dependentKeyPathsSetForKey:key]];
     
     return affecting;
 }

@@ -164,7 +164,7 @@ id nsNullToNil(id value) {
     NSDictionary<NSString*,id> *attributes = keyPaths[keyPath];
     if (!attributes) return;
     
-    switch ([attributes[kKVOObservationAttributeBlockType] integerValue]) {
+    switch ((eKVOBlockType)[attributes[kKVOObservationAttributeBlockType] integerValue]) {
         case eKVOBlockTypeNoParams: {
             KVONoParamsBlock block = attributes[kKVOObservationAttributeBlock];
             block();
@@ -194,6 +194,10 @@ id nsNullToNil(id value) {
             id newVal = nsNullToNil(change[NSKeyValueChangeNewKey]), oldVal = nsNullToNil(change[NSKeyValueChangeOldKey]);
             BOOL isPrior = [change[NSKeyValueChangeNotificationIsPriorKey] boolValue];
             block(keyPath, newVal, oldVal, isPrior);
+        } break;
+        case eKVOBlockTypeChangeDictionary: {
+            KVOChangeDictionaryBlock block = attributes[kKVOObservationAttributeBlock];
+            block(change);
         } break;
     }
 }

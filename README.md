@@ -36,7 +36,7 @@ A small Objective-C library to make the Cocoa Key-Value Observing interface not 
 	[...]
 	@end
 	
-	@implementation SomeClass <KVONotificationDelegator>
+	@implementation SomeClass
 	
 	+ (void)configKVONotificationDelegate:(KVONotificationDelegate *)delegate {
 		[delegate key:@"object1" dependsUponKeyPath:@"object2"];

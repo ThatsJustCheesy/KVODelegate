@@ -9,11 +9,6 @@
 import XCTest
 import KVODelegate
 
-class Person: NSObject {
-    dynamic var name = "", address = "", postalCode = ""
-    dynamic var creditCardNumbers: [Int] = []
-}
-
 class KVODelegateTests: XCTestCase {
     
     var kvoDelegate = KVOObservationDelegate()
@@ -27,7 +22,7 @@ class KVODelegateTests: XCTestCase {
     }
     
     func testBasicObserving() {
-        let a = Person()
+        let a = PersonA()
         a.address = "123 Happy Street"
         
         let sema = DispatchSemaphore(value: 0)
@@ -65,8 +60,6 @@ class KVODelegateTests: XCTestCase {
         signalReceived = sema.wait(timeout: timeout)
         XCTAssert(signalReceived == .success)
         XCTAssert(a.postalCode == "X7Y 8Z9")
-        
-        kvoDelegate.stopObserving(keyPath: "address", on: a)
         
         kvoDelegate.stopObserving(allKeyPathsOn: a)
     }

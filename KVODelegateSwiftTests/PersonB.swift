@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import KVODelegate;
+import KVODelegate
 
 class PersonB: NSObject, KVONotificationDelegator {
     

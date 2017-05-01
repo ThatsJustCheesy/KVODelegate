@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KVOObservationDelegate : NSObject
 
-typedef void(^KVONoParamsBlock)();
+typedef void(^KVONoParamsBlock)(void);
 typedef void(^KVOKeyPathBlock)(NSString *keyPath);
 typedef void(^KVONewOldBlock)(_Nullable id newValue, _Nullable id oldValue);
 typedef void(^KVOKeyPathNewOldBlock)(NSString *keyPath, _Nullable id newValue, _Nullable id oldValue);

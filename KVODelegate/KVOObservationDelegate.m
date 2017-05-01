@@ -148,7 +148,7 @@ static const KVOObservationAttributesKey kKVOObservationAttributeBlockType = @"b
     return observations;
 }
 
-id nsNullToNil(id value) {
+static id nsNullToNil(id value) {
     return (value == [NSNull null]) ? nil : value;
 }
 

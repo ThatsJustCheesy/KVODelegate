@@ -11,20 +11,20 @@ import KVODelegate
 
 class PersonB: NSObject, KVONotificationDelegator {
     
-    dynamic var firstName = "", lastName = "", address = "", postalCode = ""
+    @objc dynamic var firstName = "", lastName = "", address = "", postalCode = ""
     
-    dynamic var fullName: String {
+    @objc dynamic var fullName: String {
         get {
             return firstName + " " + lastName
         }
         set {
             let spaceLoc = newValue.range(of: " ")!
-            firstName = newValue.substring(to: spaceLoc.lowerBound)
-            lastName = newValue.substring(from: newValue.index(after: spaceLoc.lowerBound))
+            firstName = String(newValue[..<spaceLoc.lowerBound])
+            lastName = String(newValue[newValue.index(after: spaceLoc.lowerBound)...])
         }
     }
     
-    dynamic var creditCardNumbers: [Int] = []
+    @objc dynamic var creditCardNumbers: [Int] = []
     
     class func configKVONotificationDelegate(_ delegate: KVONotificationDelegate) {
         delegate.key("fullName", dependsUponKeyPaths: ["firstName", "lastName"])

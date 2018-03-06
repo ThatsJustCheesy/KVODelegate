@@ -44,7 +44,7 @@ class KVODelegateTests: XCTestCase {
         kvoDelegate.startObserving(keyPath: "address", on: a, using: { (new, old) in
             XCTAssert(a.address.isEqual(new))
             if let new = new as? String, let old = old as? String {
-                if new.contains(old.substring(from: old.index(old.startIndex, offsetBy: 4))) {
+                if new.contains(old[old.index(old.startIndex, offsetBy: 4)...]) {
                     a.postalCode = "A1B 2D4"
                 } else {
                     a.postalCode = "X7Y 8Z9"

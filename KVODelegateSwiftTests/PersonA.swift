@@ -10,6 +10,6 @@ import Foundation
 
 class PersonA: NSObject {
     
-    dynamic var address = "", postalCode = ""
+    @objc dynamic var address = "", postalCode = ""
     
 }

@@ -28,8 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 #define KVO_DELEGATE_HANDLES_keyPathsForValuesAffectingValueForKey \
-+ (NSSet<NSString*> *)keyPathsForValuesAffectingValueForKey:(NSString *)key { \
-    return [[KVONotificationDelegate delegateForClass:self] keyPathsForValuesAffectingValueForKey:key]; \
-}
+    + (NSSet<NSString*> *)keyPathsForValuesAffectingValueForKey:(NSString *)key { \
+        return [[KVONotificationDelegate delegateForClass:self] keyPathsForValuesAffectingValueForKey:key]; \
+    }
 
 NS_ASSUME_NONNULL_END

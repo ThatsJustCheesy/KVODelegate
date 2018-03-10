@@ -285,7 +285,10 @@ static BOOL isPrior(NSDictionary<NSKeyValueChangeKey,id> *change) {
             KVOWeakSelfKeyPathNewOldBlock block = attributes[kKVOObservationAttributeBlock];
             block(_owner, keyPath, newVal(change), oldVal(change));
         } break;
-        case eKVOBlockTypeWeakSelfKeyPathNewOldPrior:
+        case eKVOBlockTypeWeakSelfKeyPathNewOldPrior: {
+            KVOWeakSelfKeyPathNewOldPriorBlock block = attributes[kKVOObservationAttributeBlock];
+            block(_owner, keyPath, newVal(change), oldVal(change), isPrior(change));
+        } break;
         case eKVOBlockTypeChangeDictionary: {
             KVOChangeDictionaryBlock block = attributes[kKVOObservationAttributeBlock];
             block(change);

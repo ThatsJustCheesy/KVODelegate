@@ -134,13 +134,13 @@ static const KVOObservationAttributesKey kKVOObservationAttributeBlockType = @"b
     [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeNewOldPrior options:options];
 }
 - (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPaths on:(NSObject *)object usingWeakSelfKeyPathBlock:(KVOWeakSelfKeyPathBlock)block options:(NSKeyValueObservingOptions)options {
-    
+    [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeWeakSelfKeyPath options:options];
 }
 - (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPaths on:(NSObject *)object usingWeakSelfNewOldBlock:(KVOWeakSelfNewOldBlock)block options:(NSKeyValueObservingOptions)options {
-    
+    [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeWeakSelfNewOld options:options];
 }
-- (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPath on:(NSObject *)object usingWeakSelfNewOldPriorBlock:(KVOWeakSelfNewOldPriorBlock)block options:(NSKeyValueObservingOptions)options {
-    
+- (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPaths on:(NSObject *)object usingWeakSelfNewOldPriorBlock:(KVOWeakSelfNewOldPriorBlock)block options:(NSKeyValueObservingOptions)options {
+    [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeWeakSelfNewOldPrior options:options];
 }
 - (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPaths on:(NSObject *)object usingKeyPathNewOldBlock:(KVOKeyPathNewOldBlock)block options:(NSKeyValueObservingOptions)options {
     [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeKeyPathNewOld options:options];
@@ -149,16 +149,16 @@ static const KVOObservationAttributesKey kKVOObservationAttributeBlockType = @"b
     [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeKeyPathNewOldPrior options:options];
 }
 - (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPaths on:(NSObject *)object usingWeakSelfKeyPathNewOldBlock:(KVOWeakSelfKeyPathNewOldBlock)block options:(NSKeyValueObservingOptions)options {
-    
+    [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeWeakSelfKeyPathNewOld options:options];
 }
 - (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPaths on:(NSObject *)object usingWeakSelfKeyPathNewOldPriorBlock:(KVOWeakSelfKeyPathNewOldPriorBlock)block options:(NSKeyValueObservingOptions)options {
-    
+    [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeWeakSelfKeyPathNewOldPrior options:options];
 }
 - (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPaths on:(NSObject *)object usingChangeDictionaryBlock:(KVOChangeDictionaryBlock)block options:(NSKeyValueObservingOptions)options {
     [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeChangeDictionary options:options];
 }
 - (void)startObservingKeyPaths:(NSArray<NSString*> *)keyPaths on:(NSObject *)object usingWeakSelfChangeDictionaryBlock:(KVOWeakSelfChangeDictionaryBlock)block options:(NSKeyValueObservingOptions)options {
-    
+    [self startObservingKeyPaths:keyPaths on:object usingBlock:block blockType:eKVOBlockTypeWeakSelfChangeDictionary options:options];
 }
 
 // PRIVATE

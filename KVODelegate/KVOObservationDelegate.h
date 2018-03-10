@@ -23,19 +23,19 @@ typedef id OwnerType;
 #endif
 
 typedef void(^KVONoParamsBlock)(void);
-typedef void(^KVOWeakSelfBlock)(__weak OwnerType weakSelf) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
+typedef void(^KVOWeakSelfBlock)(OwnerType weakSelf) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
 typedef void(^KVOKeyPathBlock)(NSString *keyPath);
 typedef void(^KVONewOldBlock)(_Nullable id newValue, _Nullable id oldValue);
 typedef void(^KVONewOldPriorBlock)(_Nullable id newValue, _Nullable id oldValue, BOOL prior);
-typedef void(^KVOWeakSelfKeyPathBlock)(__weak OwnerType weakSelf, NSString *keyPath) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
-typedef void(^KVOWeakSelfNewOldBlock)(__weak OwnerType weakSelf, _Nullable id newValue, _Nullable id oldValue) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
-typedef void(^KVOWeakSelfNewOldPriorBlock)(__weak OwnerType weakSelf, _Nullable id newValue, _Nullable id oldValue, BOOL prior) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
+typedef void(^KVOWeakSelfKeyPathBlock)(OwnerType weakSelf, NSString *keyPath) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
+typedef void(^KVOWeakSelfNewOldBlock)(OwnerType weakSelf, _Nullable id newValue, _Nullable id oldValue) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
+typedef void(^KVOWeakSelfNewOldPriorBlock)(OwnerType weakSelf, _Nullable id newValue, _Nullable id oldValue, BOOL prior) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
 typedef void(^KVOKeyPathNewOldBlock)(NSString *keyPath, _Nullable id newValue, _Nullable id oldValue);
 typedef void(^KVOKeyPathNewOldPriorBlock)(NSString *keyPath, _Nullable id newValue, _Nullable id oldValue, BOOL prior);
-typedef void(^KVOWeakSelfKeyPathNewOldBlock)(__weak OwnerType weakSelf, NSString *keyPath, _Nullable id newValue, _Nullable id oldValue) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
-typedef void(^KVOWeakSelfKeyPathNewOldPriorBlock)(__weak OwnerType weakSelf, NSString *keyPath, _Nullable id newValue, _Nullable id oldValue, BOOL prior) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
+typedef void(^KVOWeakSelfKeyPathNewOldBlock)(OwnerType weakSelf, NSString *keyPath, _Nullable id newValue, _Nullable id oldValue) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
+typedef void(^KVOWeakSelfKeyPathNewOldPriorBlock)(OwnerType weakSelf, NSString *keyPath, _Nullable id newValue, _Nullable id oldValue, BOOL prior) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
 typedef void(^KVOChangeDictionaryBlock)(NSDictionary<NSKeyValueChangeKey,id> *change);
-typedef void(^KVOWeakSelfChangeDictionaryBlock)(__weak OwnerType weakSelf, NSDictionary<NSKeyValueChangeKey,id> *change) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
+typedef void(^KVOWeakSelfChangeDictionaryBlock)(OwnerType weakSelf, NSDictionary<NSKeyValueChangeKey,id> *change) NS_SWIFT_UNAVAILABLE("Use a capture list of [weak self] or [unowned self] instead");
 
 @property(weak,nullable) OwnerType owner;
 

@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C07936920597C550078CB79 /* ObservationDelegateSelectorSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07936820597C550078CB79 /* ObservationDelegateSelectorSwiftTests.swift */; };
+		3C78D7042056CDCD006FD5B1 /* ObservationDelegateSelectorObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C78D7032056CDCD006FD5B1 /* ObservationDelegateSelectorObjCTests.m */; };
+		3C78D7062056CE85006FD5B1 /* NotificationDelegateDependentKeysObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C78D7052056CE85006FD5B1 /* NotificationDelegateDependentKeysObjCTests.m */; };
+		3C78D7082056CEDD006FD5B1 /* ObservationDelegateBlockWithOwnerObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C78D7072056CEDD006FD5B1 /* ObservationDelegateBlockWithOwnerObjCTests.m */; };
+		3C78D710205887AB006FD5B1 /* DefectiveNotificationDelegator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C78D70F205887AB006FD5B1 /* DefectiveNotificationDelegator.m */; };
 		3C8453121E7A1F9500FADC05 /* KVODelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5EE691E79C3D3008C829C /* KVODelegate.framework */; };
-		3C8453181E7A261F00FADC05 /* SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE881E79C49D008C829C /* SwiftTests.swift */; };
-		3C8453191E7A276900FADC05 /* ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE771E79C3D3008C829C /* ObjCTests.m */; };
+		3C8453181E7A261F00FADC05 /* ObservationDelegateBlockSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE881E79C49D008C829C /* ObservationDelegateBlockSwiftTests.swift */; };
+		3C8453191E7A276900FADC05 /* ObservationDelegateBlockObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE771E79C3D3008C829C /* ObservationDelegateBlockObjCTests.m */; };
 		3C84532D1E7B22BE00FADC05 /* KVONotificationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C84532E1E7B22BE00FADC05 /* KVONotificationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */; };
-		3C8453441E7B44CA00FADC05 /* PersonA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453431E7B44CA00FADC05 /* PersonA.m */; };
-		3C8453471E7B49E200FADC05 /* PersonB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453461E7B49E200FADC05 /* PersonB.m */; };
+		3C8453441E7B44CA00FADC05 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453431E7B44CA00FADC05 /* Person.m */; };
+		3C8453471E7B49E200FADC05 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453461E7B49E200FADC05 /* Contact.m */; };
 		3C84534B1E7B6CBF00FADC05 /* KVONotificationDelegator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C84534A1E7B6CBF00FADC05 /* KVONotificationDelegator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C84534F1E7C2E7C00FADC05 /* PersonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84534E1E7C2E7C00FADC05 /* PersonA.swift */; };
-		3C8453511E7C2E8B00FADC05 /* PersonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453501E7C2E8B00FADC05 /* PersonB.swift */; };
+		3C84534F1E7C2E7C00FADC05 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84534E1E7C2E7C00FADC05 /* Person.swift */; };
+		3C8453511E7C2E8B00FADC05 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8453501E7C2E8B00FADC05 /* Contact.swift */; };
 		3CF5EE7A1E79C3D3008C829C /* KVODelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE851E79C419008C829C /* KVOObservationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF5EE861E79C419008C829C /* KVOObservationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */; };
@@ -41,26 +46,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C07936820597C550078CB79 /* ObservationDelegateSelectorSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDelegateSelectorSwiftTests.swift; sourceTree = "<group>"; };
+		3C78D7032056CDCD006FD5B1 /* ObservationDelegateSelectorObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObservationDelegateSelectorObjCTests.m; sourceTree = "<group>"; };
+		3C78D7052056CE85006FD5B1 /* NotificationDelegateDependentKeysObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationDelegateDependentKeysObjCTests.m; sourceTree = "<group>"; };
+		3C78D7072056CEDD006FD5B1 /* ObservationDelegateBlockWithOwnerObjCTests.m */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ObservationDelegateBlockWithOwnerObjCTests.m; sourceTree = "<group>"; };
+		3C78D70E205887AB006FD5B1 /* DefectiveNotificationDelegator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefectiveNotificationDelegator.h; sourceTree = "<group>"; };
+		3C78D70F205887AB006FD5B1 /* DefectiveNotificationDelegator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefectiveNotificationDelegator.m; sourceTree = "<group>"; };
 		3C84530D1E7A1F9500FADC05 /* KVODelegateSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8453111E7A1F9500FADC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C84532B1E7B22BE00FADC05 /* KVONotificationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegate.h; sourceTree = "<group>"; wrapsLines = 1; };
 		3C84532C1E7B22BE00FADC05 /* KVONotificationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVONotificationDelegate.m; sourceTree = "<group>"; };
-		3C8453421E7B44CA00FADC05 /* PersonA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonA.h; sourceTree = "<group>"; };
-		3C8453431E7B44CA00FADC05 /* PersonA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonA.m; sourceTree = "<group>"; };
-		3C8453451E7B49D500FADC05 /* PersonB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonB.h; sourceTree = "<group>"; };
-		3C8453461E7B49E200FADC05 /* PersonB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonB.m; sourceTree = "<group>"; };
+		3C8453421E7B44CA00FADC05 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		3C8453431E7B44CA00FADC05 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		3C8453451E7B49D500FADC05 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		3C8453461E7B49E200FADC05 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		3C84534A1E7B6CBF00FADC05 /* KVONotificationDelegator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegator.h; sourceTree = "<group>"; };
-		3C84534E1E7C2E7C00FADC05 /* PersonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonA.swift; sourceTree = "<group>"; };
-		3C8453501E7C2E8B00FADC05 /* PersonB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonB.swift; sourceTree = "<group>"; };
+		3C84534E1E7C2E7C00FADC05 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3C8453501E7C2E8B00FADC05 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		3CF5EE691E79C3D3008C829C /* KVODelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KVODelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVODelegate.h; sourceTree = "<group>"; };
 		3CF5EE721E79C3D3008C829C /* KVODelegateObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CF5EE771E79C3D3008C829C /* ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCTests.m; sourceTree = "<group>"; };
+		3CF5EE771E79C3D3008C829C /* ObservationDelegateBlockObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObservationDelegateBlockObjCTests.m; sourceTree = "<group>"; };
 		3CF5EE791E79C3D3008C829C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CF5EE831E79C419008C829C /* KVOObservationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOObservationDelegate.h; sourceTree = "<group>"; };
 		3CF5EE841E79C419008C829C /* KVOObservationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOObservationDelegate.m; sourceTree = "<group>"; };
 		3CF5EE871E79C49D008C829C /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		3CF5EE881E79C49D008C829C /* SwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTests.swift; sourceTree = "<group>"; };
+		3CF5EE881E79C49D008C829C /* ObservationDelegateBlockSwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationDelegateBlockSwiftTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +104,10 @@
 		3C84530E1E7A1F9500FADC05 /* KVODelegateSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				3CF5EE881E79C49D008C829C /* SwiftTests.swift */,
-				3C84534E1E7C2E7C00FADC05 /* PersonA.swift */,
-				3C8453501E7C2E8B00FADC05 /* PersonB.swift */,
+				3CF5EE881E79C49D008C829C /* ObservationDelegateBlockSwiftTests.swift */,
+				3C07936820597C550078CB79 /* ObservationDelegateSelectorSwiftTests.swift */,
+				3C84534E1E7C2E7C00FADC05 /* Person.swift */,
+				3C8453501E7C2E8B00FADC05 /* Contact.swift */,
 				3CF5EE871E79C49D008C829C /* BridgingHeader.h */,
 				3C8453111E7A1F9500FADC05 /* Info.plist */,
 			);
@@ -138,11 +150,16 @@
 		3CF5EE761E79C3D3008C829C /* KVODelegateObjCTests */ = {
 			isa = PBXGroup;
 			children = (
-				3CF5EE771E79C3D3008C829C /* ObjCTests.m */,
-				3C8453421E7B44CA00FADC05 /* PersonA.h */,
-				3C8453431E7B44CA00FADC05 /* PersonA.m */,
-				3C8453451E7B49D500FADC05 /* PersonB.h */,
-				3C8453461E7B49E200FADC05 /* PersonB.m */,
+				3CF5EE771E79C3D3008C829C /* ObservationDelegateBlockObjCTests.m */,
+				3C78D7072056CEDD006FD5B1 /* ObservationDelegateBlockWithOwnerObjCTests.m */,
+				3C78D7032056CDCD006FD5B1 /* ObservationDelegateSelectorObjCTests.m */,
+				3C78D7052056CE85006FD5B1 /* NotificationDelegateDependentKeysObjCTests.m */,
+				3C8453421E7B44CA00FADC05 /* Person.h */,
+				3C8453431E7B44CA00FADC05 /* Person.m */,
+				3C8453451E7B49D500FADC05 /* Contact.h */,
+				3C8453461E7B49E200FADC05 /* Contact.m */,
+				3C78D70E205887AB006FD5B1 /* DefectiveNotificationDelegator.h */,
+				3C78D70F205887AB006FD5B1 /* DefectiveNotificationDelegator.m */,
 				3CF5EE791E79C3D3008C829C /* Info.plist */,
 			);
 			path = KVODelegateObjCTests;
@@ -297,9 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8453511E7C2E8B00FADC05 /* PersonB.swift in Sources */,
-				3C84534F1E7C2E7C00FADC05 /* PersonA.swift in Sources */,
-				3C8453181E7A261F00FADC05 /* SwiftTests.swift in Sources */,
+				3C8453511E7C2E8B00FADC05 /* Contact.swift in Sources */,
+				3C84534F1E7C2E7C00FADC05 /* Person.swift in Sources */,
+				3C07936920597C550078CB79 /* ObservationDelegateSelectorSwiftTests.swift in Sources */,
+				3C8453181E7A261F00FADC05 /* ObservationDelegateBlockSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,9 +334,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8453471E7B49E200FADC05 /* PersonB.m in Sources */,
-				3C8453441E7B44CA00FADC05 /* PersonA.m in Sources */,
-				3C8453191E7A276900FADC05 /* ObjCTests.m in Sources */,
+				3C78D710205887AB006FD5B1 /* DefectiveNotificationDelegator.m in Sources */,
+				3C78D7042056CDCD006FD5B1 /* ObservationDelegateSelectorObjCTests.m in Sources */,
+				3C8453471E7B49E200FADC05 /* Contact.m in Sources */,
+				3C78D7062056CE85006FD5B1 /* NotificationDelegateDependentKeysObjCTests.m in Sources */,
+				3C78D7082056CEDD006FD5B1 /* ObservationDelegateBlockWithOwnerObjCTests.m in Sources */,
+				3C8453441E7B44CA00FADC05 /* Person.m in Sources */,
+				3C8453191E7A276900FADC05 /* ObservationDelegateBlockObjCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +416,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -421,6 +443,7 @@
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(TARGET_NAME)/**";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = "-Wimplicit-fallthrough";
 			};
 			name = Debug;
 		};
@@ -453,7 +476,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -474,6 +497,7 @@
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(TARGET_NAME)/**";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = "-Wimplicit-fallthrough";
 			};
 			name = Release;
 		};
@@ -487,7 +511,7 @@
 				DEVELOPMENT_TEAM = 7H3X83BUY2;
 				DSTROOT = "$(HOME)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -508,7 +532,7 @@
 				DEVELOPMENT_TEAM = 7H3X83BUY2;
 				DSTROOT = "$(HOME)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

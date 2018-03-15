@@ -8,8 +8,8 @@
 
 @import Foundation;
 
-@interface PersonA : NSObject
+@interface Person : NSObject
 
-@property NSString *address, *postalCode;
+@property NSUInteger age;
 
 @end

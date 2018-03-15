@@ -17,31 +17,31 @@
 
 @end
 
-static NSMutableDictionary<Class <KVONotificationDelegator>,KVONotificationDelegate*> *_delegates;
+static NSMutableDictionary<Class <KVONotificationDelegator>,KVONotificationDelegate*> *delegates_;
 
 @implementation KVONotificationDelegate
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wobjc-method-access" // "Instance method [...] found instead of class method [...]"
 + (instancetype)delegateForClass:(Class <KVONotificationDelegator>)clas {
     static dispatch_once_t once;
     dispatch_once(&once, ^{
-        _delegates = [NSMutableDictionary dictionary];
+        delegates_ = [NSMutableDictionary dictionary];
     });
     
-    KVONotificationDelegate *delegate = _delegates[clas];
-    if (!delegate) {
-        delegate = _delegates[(Class <NSCopying>)clas] = [[self alloc] initWithOwner:clas];
-        if ([clas respondsToSelector:@selector(configKVONotificationDelegate:)]) {
-            [clas performSelector:@selector(configKVONotificationDelegate:) withObject:delegate];
-        } else {
-            [NSException raise:@"KVONotificationDelegateException" format:@"KVONotificationDelegate requested for class '%@', but it does not respond to +configKVONotificationDelegate: (the requested delegate will be useless)", clas];
-        }
+    KVONotificationDelegate *delegate = delegates_[clas];
+    if (delegate) return delegate;
+    
+    delegate = [[self alloc] initWithOwner:clas];
+    delegates_[(Class <NSCopying>)clas] = delegate;
+    
+    if ([clas respondsToSelector:@selector(configKVONotificationDelegate:)]) {
+        ((void(*)(Class self, SEL _cmd, KVONotificationDelegate *delegate))objc_msgSend)
+            (clas, @selector(configKVONotificationDelegate:), delegate);
+    } else {
+        [NSException raise:@"KVONotificationDelegateException" format:@"KVONotificationDelegate requested for class '%@', but it does not respond to +configKVONotificationDelegate: (the requested delegate will be useless)", clas];
     }
     
     return delegate;
 }
-#pragma clang diagnostic pop
 
 - (instancetype)initWithOwner:(Class)owner {
     self = [super init];
@@ -55,7 +55,6 @@ static NSMutableDictionary<Class <KVONotificationDelegator>,KVONotificationDeleg
 - (void)key:(NSString *)dependent dependsUponKeyPath:(NSString *)affecting {
     [[self dependentKeyPathsSetForKey:dependent] addObject:affecting];
 }
-
 - (void)key:(NSString *)dependent dependsUponKeyPaths:(NSArray<NSString*> *)affecting {
     [[self dependentKeyPathsSetForKey:dependent] addObjectsFromArray:affecting];
 }
@@ -64,23 +63,39 @@ static NSMutableDictionary<Class <KVONotificationDelegator>,KVONotificationDeleg
     if (!self.dependentKeys) self.dependentKeys = [NSMutableDictionary dictionary];
 
     NSMutableSet<NSString*> *keys = self.dependentKeys[key];
-    if (!keys) keys = self.dependentKeys[key] = [NSMutableSet set];
+    if (keys) return keys;
     
+    keys = [NSMutableSet set];
+    self.dependentKeys[key] = keys;
     return keys;
 }
 
 - (NSSet<NSString*> *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
     NSMutableSet<NSString*> *affecting = [NSMutableSet set];
-    Class ownerSuper = self.owner.superclass;
     
-    [affecting unionSet:[ownerSuper keyPathsForValuesAffectingValueForKey:key]];
+    // Retrieve affecting key paths from the superclass's implementation
+    [affecting unionSet:[self.owner.superclass keyPathsForValuesAffectingValueForKey:key]];
     
-    SEL sel = NSSelectorFromString([NSString stringWithFormat:@"keyPathsForValuesAffecting%@", key]);
-    if ([ownerSuper respondsToSelector:sel]) {
-        // ARC killed performSelector: for dynamic selectors
-        [affecting unionSet:((NSSet<NSString*>* (*)(id, SEL))objc_msgSend)(ownerSuper, sel)];
+    // Grab NSObject's +keyPathsForValuesAffectingValueForKey (which handles calling keyPathsForValuesAffecting<Key> methods for us) and copy it to this delegate's owner class under an addressable name
+    SEL selector = sel_registerName("KVO_NSObject_keyPathsForValuesAffectingValueForKey:");
+    if (![self.owner respondsToSelector:selector]) {
+        IMP implementation = class_getMethodImplementation(objc_getMetaClass("NSObject"), @selector(keyPathsForValuesAffectingValueForKey:));
+        BOOL success = class_addMethod(object_getClass(self.owner), selector, implementation, "@@:@");
+        NSAssert(success, @"Failed to add addressable +[NSObject keyPathsForValuesAffectingValueForKey] to class '%@'", self.owner);
     }
     
+    // Call NSObject's implementation, which retrieves affecting key paths from any keyPathsForValuesAffecting<Key> methods
+    [affecting unionSet:((NSSet<NSString*>*(*)(id self, SEL _cmd, NSString *key))objc_msgSend)(
+        self.owner, selector, key)];
+    
+    // Backup implementation in case +[NSObject keyPathsForValuesAffectingValueForKey:] changes its implementation some day
+//    char upcasedFirstLetterOfKey = [key characterAtIndex:0] - ('a' - 'A');
+//    SEL keyNameSelector = NSSelectorFromString([NSString stringWithFormat:@"keyPathsForValuesAffecting%c%@", upcasedFirstLetterOfKey, [key substringFromIndex:1]]);
+//    if ([self.owner respondsToSelector:keyNameSelector]) {
+//        [affecting unionSet:((NSSet<NSString*>*(*)(id self, SEL _cmd))objc_msgSend)(self.owner, keyNameSelector)];
+//    }
+    
+    // Finally, add in affecting keys that were declared in +configKVONotificationDelegate
     [affecting unionSet:[self dependentKeyPathsSetForKey:key]];
     
     return affecting;

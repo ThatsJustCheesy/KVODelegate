@@ -1,5 +1,5 @@
 //
-//  PersonA.swift
+//  Person.swift
 //  KVODelegate
 //
 //  Created by Ian Gregory on 17-03-2017.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class PersonA: NSObject {
+class Person: NSObject {
     
-    @objc dynamic var address = "", postalCode = ""
+    @objc dynamic var age: UInt = 0
     
 }

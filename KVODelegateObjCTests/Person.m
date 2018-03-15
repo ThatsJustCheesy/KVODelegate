@@ -6,8 +6,8 @@
 //  Copyright © 2017 ThatsJustCheesy. All rights reserved.
 //
 
-#import "PersonA.h"
+#import "Person.h"
 
-@implementation PersonA
+@implementation Person
 
 @end

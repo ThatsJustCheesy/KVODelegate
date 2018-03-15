@@ -9,9 +9,8 @@
 @import Foundation;
 @import KVODelegate;
 
-@interface PersonB : NSObject <KVONotificationDelegator>
+@interface Contact : NSObject <KVONotificationDelegator>
 
-@property NSString *firstName, *lastName, *fullName, *address, *postalCode;
-@property NSArray<NSNumber*> *creditCardNumbers;
+@property NSString *firstName, *lastName, *title, *fullName, *titleAndLastName;
 
 @end

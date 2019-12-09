@@ -63,6 +63,7 @@
 		3C84534A1E7B6CBF00FADC05 /* KVONotificationDelegator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVONotificationDelegator.h; sourceTree = "<group>"; };
 		3C84534E1E7C2E7C00FADC05 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		3C8453501E7C2E8B00FADC05 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		3C8C13CC239F03C10036206F /* KVODelegate Swift Package */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "KVODelegate Swift Package"; sourceTree = "<group>"; };
 		3CF5EE691E79C3D3008C829C /* KVODelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KVODelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF5EE6C1E79C3D3008C829C /* KVODelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVODelegate.h; sourceTree = "<group>"; };
 		3CF5EE721E79C3D3008C829C /* KVODelegateObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODelegateObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +118,7 @@
 		3CF5EE5F1E79C3D3008C829C = {
 			isa = PBXGroup;
 			children = (
+				3C8C13CC239F03C10036206F /* KVODelegate Swift Package */,
 				3CF5EE6B1E79C3D3008C829C /* KVODelegate */,
 				3CF5EE761E79C3D3008C829C /* KVODelegateObjCTests */,
 				3C84530E1E7A1F9500FADC05 /* KVODelegateSwiftTests */,

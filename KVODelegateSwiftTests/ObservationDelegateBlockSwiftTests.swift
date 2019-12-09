@@ -165,3 +165,5 @@ class ObservationDelegateBlockSwiftTests: XCTestCase {
         
         waitForExpectations(timeout: 0.05, handler: nil)
     }
+
+}

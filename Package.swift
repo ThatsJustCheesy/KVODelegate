@@ -21,7 +21,8 @@ let package = Package(
         .target(
             name: "KVODelegate",
             dependencies: [],
-            path: "KVODelegate"),
+            path: "KVODelegate",
+            publicHeadersPath: "."),
         // KVODelegate: Tests exist but would not cooperate with SPM.
         //              Run them in Xcode.
     ]

@@ -20,7 +20,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "KVODelegate",
-            dependencies: []),
+            dependencies: [],
+            path: "KVODelegate"),
         // KVODelegate: Tests exist but would not cooperate with SPM.
         //              Run them in Xcode.
     ]

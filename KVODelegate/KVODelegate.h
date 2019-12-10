@@ -8,5 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-#import <KVODelegate/KVOObservationDelegate.h>
-#import <KVODelegate/KVONotificationDelegate.h>
+#import "KVOObservationDelegate.h"
+#import "KVONotificationDelegate.h"
